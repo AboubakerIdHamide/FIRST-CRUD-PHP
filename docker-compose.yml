@@ -1,0 +1,9 @@
+version: '1'
+services:
+  web:
+    image: php:apache
+    ports:
+      - 80:80
+      - 443:443
+    volumes: # volume is a shared folder between host and container
+      - "./:/var/www/html" # sync current directory to /var/www/html
